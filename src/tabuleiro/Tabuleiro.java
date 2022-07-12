@@ -54,7 +54,7 @@ public class Tabuleiro {
 		
 	}
 	public boolean posicaoExiste(int linha, int coluna) {
-		return linha >= 0 && coluna < linhas && coluna>= 0 && coluna < colunas;
+		return linha >= 0 && linha < linhas && coluna>= 0 && coluna < colunas;
 		
 	}
 	public boolean posicaoExiste(Posicao posicao) {
