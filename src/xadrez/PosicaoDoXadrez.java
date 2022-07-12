@@ -22,7 +22,7 @@ public class PosicaoDoXadrez {
 		return new Posicao(8 - linha, coluna - 'a');	
 	}
 	protected static PosicaoDoXadrez converteDaPosicao(Posicao posicao) {
-		return new PosicaoDoXadrez((char)('a' - posicao.getColuna()), 8 - posicao.getLinha());
+		return new PosicaoDoXadrez((char)('a' + posicao.getColuna()), 8 - posicao.getLinha());
 	}
 	
 	@Override

@@ -57,6 +57,8 @@ public class UI {
 		System.out.println();
 		System.out.println("Jogada: " + partida.getJogada());
 		System.out.println("Aguardando Jogador: " + partida.getJogadorAtual());
+		if(partida.getCheck())
+			System.out.println("CHECK!");
 		
 	}
 
