@@ -4,7 +4,7 @@ import tabuleiro.Posicao;
 import tabuleiro.Tabuleiro;
 import xadrez.Cor;
 import xadrez.PecaDeXadrez;
-
+//Rei = King "|K"
 public class Rei extends PecaDeXadrez{
 
 	public Rei(Tabuleiro tabuleiro, Cor cor) {

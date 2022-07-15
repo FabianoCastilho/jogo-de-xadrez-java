@@ -11,6 +11,10 @@ public class Peao extends PecaDeXadrez {
 		super(tabuleiro, cor);
 
 	}
+	@Override
+	public String toString() {
+		return "P";
+	}
 
 	@Override
 	public boolean[][] movimentosPossiveis() {
@@ -41,7 +45,7 @@ public class Peao extends PecaDeXadrez {
 				mat[p.getLinha()][p.getColuna()] = true;
 			
 			p.setValues(posicao.getLinha() + 2, posicao.getColuna());
-			Posicao p2 = new Posicao(posicao.getLinha() -1, posicao.getColuna());
+			Posicao p2 = new Posicao(posicao.getLinha() + 1, posicao.getColuna());
 			if (getTabuleiro().posicaoExiste(p) && !getTabuleiro().existePecaNaPosicao(p) && getTabuleiro().posicaoExiste(p2) && !getTabuleiro().existePecaNaPosicao(p2) && getContadorDeMovimentos() == 0)
 				mat[p.getLinha()][p.getColuna()] = true;
 			
@@ -56,9 +60,6 @@ public class Peao extends PecaDeXadrez {
 		}
 		return mat;
 	}
-	@Override
-	public String toString() {
-		return "P";
-	}
+	
 
 }
