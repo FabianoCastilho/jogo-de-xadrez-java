@@ -70,24 +70,24 @@ public class UI {
 
 	public static void printTabuleiro(PecaDeXadrez[][] pecas) {
 		for (int i = 0; i < pecas.length; i++) {
-			System.out.print((8 - i) + " ");
+			System.out.print(ANSI_GREEN + (8 - i) +  ANSI_RESET + " ");
 			for (int j = 0; j < pecas.length; j++) {
 				printPeca(pecas[i][j], false);
 			}
 			System.out.println();
 		}
-		System.out.println("  a b c d e f g h");
+		System.out.println(ANSI_GREEN + "  a b c d e f g h" +  ANSI_RESET );
 
 	}
 	public static void printTabuleiro(PecaDeXadrez[][] pecas, boolean[][] movimentosPossiveis) {
 		for (int i = 0; i < pecas.length; i++) {
-			System.out.print((8 - i) + " ");
+			System.out.print(ANSI_GREEN + (8 - i) +  ANSI_RESET + " ");
 			for (int j = 0; j < pecas.length; j++) {
 				printPeca(pecas[i][j], movimentosPossiveis[i][j]);
 			}
 			System.out.println();
 		}
-		System.out.println("  a b c d e f g h");
+		System.out.println(ANSI_GREEN + "  a b c d e f g h" +  ANSI_RESET );
 
 	}
 
@@ -103,7 +103,7 @@ public class UI {
 			if (peca.getCor() == Cor.BRANCO) {
 				System.out.print(ANSI_WHITE + peca + ANSI_RESET);
 			} else {
-				System.out.print(ANSI_RED + peca + ANSI_RESET);
+				System.out.print(ANSI_BLUE + peca + ANSI_RESET);
 			}
 		}
 		System.out.print(" ");
@@ -118,7 +118,7 @@ public class UI {
 		System.out.println(Arrays.toString(brancas.toArray()));
 		System.out.print(ANSI_RESET);
 		System.out.print("Pretas: ");
-		System.out.print(ANSI_RED);
+		System.out.print(ANSI_BLUE);
 		System.out.println(Arrays.toString(pretas.toArray()));
 		System.out.print(ANSI_RESET);
 	}
