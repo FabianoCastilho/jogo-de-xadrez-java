@@ -40,7 +40,11 @@ public class Program {
 				
 				if (partida.getPecaPromovida() != null) {
 					System.out.print("Digite a peca para Promocao ( B / C / T / Q): ");
-					String tipo = sc.nextLine();
+					String tipo = sc.nextLine().toUpperCase();
+					while ( !tipo.equals("B") && !tipo.equals("C") && !tipo.equals("T") && !tipo.equals("Q")) {
+						System.out.print("Letra invalida.Digite novamente a peca para Promocao ( B / C / T / Q): ");
+						tipo = sc.nextLine().toUpperCase();
+					}
 					partida.substituirPecaPromovida(tipo);
 				}
 			}
